@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background-color: #ececec;
+      }
+      .card-wrap {
+        width: 80%;
+        margin-inline: auto;
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+        flex-wrap: wrap;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+      h2{
+        margin-block: 0;
+      }
+      .ability-label{
+        font-size: 14px;
+        color: #3d3b3b;
+      }
+      .card {
+        width: 220px;
+        z-index: 1;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        background-color: #ffff;
+        padding: 5px 15px 10px;
+        position: relative;
+        overflow: hidden;
+      }
+      .card img {
+        margin-inline: auto;
+        display: flex;
+        width: 100px;
+      }
+      .card p {
+        margin: 0;
+      }
+      .card::before {
+        content: "";
+        right: -36px;
+        top: -26px;
+        z-index: -1;
+        position: absolute;
+        width: 227px;
+        height: 227px;
+        background-color: rgba(0, 128, 0, 0.434);
+        border-radius: 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="card-wrap">{%DATA%}</section>
+  </body>
+</html>
