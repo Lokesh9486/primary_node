@@ -19,6 +19,7 @@ const replaceTemplate = (temp, data) => {
 
 const server = http.createServer((req, res) => {
   const pathName = req.url;
+  // TODO: main  route
   if (pathName === "/" || pathName === "/overview") {
     res.writeHead(200, { "Content-type": "text/html" });
     const output = dataObj.map((item) => replaceTemplate(templateCard, item)).join("");
